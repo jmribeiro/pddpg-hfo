@@ -35,8 +35,10 @@ def make_env(player, server_port, team, scale_actions):
 
 
 class Learner(object):
-    def __init__(self, agent_type, tensorboard_dir, save_dir=None, player='offense', pretrained=None,
+
+    def __init__(self, agent_type, tensorboard_dir, save_dir=".", player='offense', pretrained=None,
                  seed=1, episodes=20000, server_port=6000, max_steps=15000, save_freq=500, start=0):
+
         if player == 'offense':
             self.team = 'base_left'
             self.mid_action = offense_mid_action

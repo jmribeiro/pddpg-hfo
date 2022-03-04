@@ -1,0 +1,8 @@
+resources/cache
+.idea
+TODO.txt
+__pycache__/
+*.pyc
+venv
+gym-soccer
+TODO

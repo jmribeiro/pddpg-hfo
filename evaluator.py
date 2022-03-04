@@ -13,7 +13,7 @@ import logging
 
 
 class Evaluator(Learner):
-    def __init__(self, agent_type, tensorboard_dir, save_dir=None, player='offense', save_freq=500,
+    def __init__(self, agent_type, tensorboard_dir, save_dir=".", player='offense', save_freq=500,
                  seed=1, episodes=50, server_port=6000, eval_episodes=1000, start=0):
         super(Evaluator, self).__init__(agent_type=agent_type, tensorboard_dir=tensorboard_dir,
                                         save_dir=save_dir, player=player,
@@ -137,8 +137,8 @@ if __name__ == '__main__':
     parser.add_argument('--episodes', type=int, default=20000)
     parser.add_argument('--eval-episodes', type=int, default=1000)
     parser.add_argument('--save-freq', type=int, default=500)
-    parser.add_argument('--tensorboard-dir', type=str, default=None)
-    parser.add_argument('--save-dir', type=str, default=None)
+    parser.add_argument('--tensorboard-dir', type=str, default=".")
+    parser.add_argument('--save-dir', type=str, default=".")
     parser.add_argument('--start', type=int, default=0)
     args = parser.parse_args()
 
